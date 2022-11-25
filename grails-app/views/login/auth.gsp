@@ -2,6 +2,8 @@
 <head>
     <meta name="layout" content="${gspLayout ?: 'main'}"/>
     <title><g:message code='springSecurity.login.title'/></title>
+
+
     <style type="text/css" media="screen">
         body { background-color: red;}
     #login {
@@ -86,7 +88,29 @@
 </head>
 
 <body>
-<div id="login">
+
+<div class="login">
+    <div class="heading">
+        <h2>Connexion</h2>
+        <form action="#">
+
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Username or email">
+            </div>
+
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+
+            <button type="submit" class="float">Login</button>
+        </form>
+    </div>
+</div>
+
+
+%{--<div id="login">
     <div class="inner">
         <div class="fheader"><g:message code='springSecurity.login.header'/></div>
 
@@ -115,7 +139,7 @@
             </p>
         </form>
     </div>
-</div>
+</div>--}%
 <script>
     (function() {
         document.forms['loginForm'].elements['${usernameParameter ?: 'username'}'].focus();
