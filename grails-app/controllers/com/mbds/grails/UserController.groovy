@@ -21,6 +21,7 @@ class UserController {
     }
 
     def create() {
+
         respond new User(params)
     }
 
