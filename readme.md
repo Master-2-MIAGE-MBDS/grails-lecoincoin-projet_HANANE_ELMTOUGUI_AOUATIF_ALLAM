@@ -12,7 +12,7 @@ répondre à cette problématique</p>
 <p>le design de la plateforme</p>
 <br>
 <br>
-<h4>Solution</h4>
+<h1>Solution</h1>
 <p>Dans notre solution on s'est réaliser une application web avec un Backend qui permer à 
 Mr LeCoinCoin d'administrer les annonces,les modifiers,les supprimer et meme en créer , on a utilisé comme langage de programmation le langage GROOVY avec son framework Grails de version 3.3.8<p>
 <h4>Dépendence utilisées : Spring Security</h4>
