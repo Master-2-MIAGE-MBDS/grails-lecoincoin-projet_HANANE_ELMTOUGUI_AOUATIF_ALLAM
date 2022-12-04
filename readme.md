@@ -6,8 +6,10 @@
 <p>LeCoinCoin projet a comme objectif la vente de tous ce qui qui se peut vendre
 ou s'acheter,mais il a raté le tournant du numérique ,pour cela notre projet vient 
 répondre à cette problématique</p>
-<h4>Besoins fonctionnels:Authentification, lister les annonces, créer les comptes utilisateurs, ajouter, modifier, supprimer annonce.</h4>
-<h4>Besoins non fonctionnels :le design de la plateforme</h4>
+<h1>Besoins fonctionnels:</h1>
+<p>Authentification, lister les annonces, créer les comptes utilisateurs, ajouter, modifier, supprimer annonce.</p>
+<h1>Besoins non fonctionnels :</h1>
+<p>le design de la plateforme</p>
 <br>
 <br>
 <h4>Solution</h4>
