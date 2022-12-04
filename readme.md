@@ -8,6 +8,11 @@ ou s'acheter,mais il a raté le tournant du numérique ,pour cela notre projet v
 répondre à cette problématique</p>
 <h1>Besoins fonctionnels:</h1>
 <p>Authentification, lister les annonces, créer les comptes utilisateurs, ajouter, modifier, supprimer annonce.</p>
+<h3>*S'identifier/se déconnecter</h3>
+<h3>*Les comptes utilisateurs pourront avoir 3 roles : ADMIN,MODERATEUR,CLIENT</h3>
+<h3>*Le MODERATEUR et L'ADMIN pouront tout les deux accéder au Backend</h3>
+<h3>*Les opérations de CRUD concernent : </h3>
+<h3>Les annonces, Les Users ,Les Illustrations</h3>
 <h1>Besoins non fonctionnels :</h1>
 <p>le design de la plateforme</p>
 <br>
