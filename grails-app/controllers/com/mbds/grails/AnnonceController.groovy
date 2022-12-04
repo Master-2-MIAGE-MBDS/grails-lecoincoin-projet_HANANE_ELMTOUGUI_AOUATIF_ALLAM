@@ -50,6 +50,7 @@ class AnnonceController {
         respond annonceService.get(id)
     }
 
+
     def update(Annonce annonce) {
         if (annonce == null) {
             notFound()

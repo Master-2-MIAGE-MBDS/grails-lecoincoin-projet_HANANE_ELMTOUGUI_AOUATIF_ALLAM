@@ -4,35 +4,60 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <asset:stylesheet src="style.css"/>
     </head>
     <body>
-        <a href="#create-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-            </ul>
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h1 class="mb-4" style="text-align: center"><g:message code="Créer un nouveau utilisateur" args="['create']"/></h1>
         </div>
-        <div id="create-user" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${this.user}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${this.user}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-            </g:hasErrors>
-            <g:form resource="${this.user}" method="POST">
-                <fieldset class="form">
-                    <f:all bean="user"/>
-                </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-                </fieldset>
+        <div class="card-body">
+            <g:form controller="user" action="save">
+
+            %{--Partial Templating--}%
+                <div class="form-group">
+                    <label>Username </label>
+                    <g:textField name="username" class="form-control" value="${user?.username}" placeholder="Username"/>
+                    <UIHelper:renderErrorMessage fieldName="username" model="${user}" errorMessage="entrer votre username"/>
+                </div>
+
+                <g:if test="${!edit}">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <g:passwordField name="password"  class="form-control" value="${user?.password}" placeholder="Password"/>
+                        <UIHelper:renderErrorMessage fieldName="password" model="${user}" errorMessage="Entrer votre Password."/>
+                    </div>
+                </g:if>
+                <div class="form-group">
+                    <g:checkBox name="passwordExpired" value="${user?.passwordExpired}" />
+                    <label><g:message code="passwordExpired"/> </label>
+                    <UIHelper:renderErrorMessage fieldName="passwordExpired" model="${user}" />
+                </div>
+                <div class="form-group">
+                    <g:checkBox name="accountLocked" value="${user?.accountLocked}" />
+                    <label><g:message code="accountLocked"/> </label>
+                    <UIHelper:renderErrorMessage fieldName="accountLocked" model="${user}" />
+                </div>
+                <div class="form-group">
+                    <g:checkBox name="accountExpired" value="${user?.accountExpired}" />
+                    <label><g:message code="accountExpired"/> </label>
+                    <UIHelper:renderErrorMessage fieldName="accountExpired" model="${user}" />
+                </div>
+                <div class="form-group">
+                    <g:checkBox name="enabled" value="${user?.enabled}" />
+                    <label><g:message code="enabled"/> </label>
+                    <UIHelper:renderErrorMessage fieldName="enabled" model="${user}" />
+                </div>
+                <div class="form-action-panel">
+                    <g:submitButton class="btn btn-primary" name="save" value="${g.message(code: "save")}"/>
+                    <g:link controller="member" action="index" class="btn btn-primary"><g:message code="cancel"/></g:link>
+                </div>
             </g:form>
         </div>
+    </div>
     </body>
+
 </html>
