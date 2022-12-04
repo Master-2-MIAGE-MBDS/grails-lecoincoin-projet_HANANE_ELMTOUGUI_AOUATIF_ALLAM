@@ -6,11 +6,14 @@
 <p>LeCoinCoin projet a comme objectif la vente de tous ce qui qui se peut vendre
 ou s'acheter,mais il a raté le tournant du numérique ,pour cela notre projet vient 
 répondre à cette problématique</p>
+<h4>Besoins fonctionnels:Authentification, lister les annonces, créer les comptes utilisateurs, ajouter, modifier, supprimer annonce.</h4>
+<h4>Besoins non fonctionnels :le design de la plateforme</h4>
 <br>
 <br>
 <h4>Solution</h4>
 <p>Dans notre solution on s'est réaliser une application web avec un Backend qui permer à 
 Mr LeCoinCoin d'administrer les annonces,les modifiers,les supprimer et meme en créer , on a utilisé comme langage de programmation le langage GROOVY avec son framework Grails de version 3.3.8<p>
+<h4>Dépendence utilisées : Spring Security</h4>
 
 <br>
 <h3 style="color: #2f6f9f">SideBar et contenu de la page</h3>
