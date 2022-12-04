@@ -10,7 +10,7 @@ répondre à cette problématique</p>
 <br>
 <h4>Solution</h4>
 <p>Dans notre solution on s'est réaliser une application web avec un Backend qui permer à 
-Mr LeCoinCoin d'administrer les annonces,les modifiers,les supprimer et meme en créer<p>
+Mr LeCoinCoin d'administrer les annonces,les modifiers,les supprimer et meme en créer , on a utilisé comme langage de programmation le langage GROOVY avec son framework Grails de version 3.3.8<p>
 
 <br>
 <h3 style="color: #2f6f9f">SideBar et contenu de la page</h3>
